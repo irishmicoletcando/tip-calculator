@@ -84,17 +84,13 @@ body {
 }
 
 /* inputs */
-.number-of-people::-webkit-outer-spin-button,
-.number-of-people::-webkit-inner-spin-button, 
-.amount::-webkit-outer-spin-button,
-.amount::-webkit-inner-spin-button, 
-.custom-percent-tip::-webkit-outer-spin-button,
-.custom-percent-tip::-webkit-inner-spin-button {
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.amount, .custom-percent-tip, .number-of-people {
+input[type=number] {
   color: var(--very-dark-cyan);
   font-size: 1.5rem;
   text-align: right;
@@ -109,7 +105,7 @@ body {
   color: var(--grayish-cyan);
 }
 
-.amount:active, .custom-percent-tip:active, .number-of-people:active {
+input[type=number]:focus {
   outline: 2px solid var(--very-dark-cyan);
 }
 
@@ -153,6 +149,10 @@ body {
   padding: 0.5em 0;
   border-radius: 0.25em;
   cursor: pointer;
+}
+
+.tip-btn:active, .btn-reset:hover {
+  background-color: var(--light-grayish-cyan);
 }
 
 /* footer  */
