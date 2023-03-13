@@ -17,14 +17,14 @@
     <div class="tip-calculator-container">
       <div class="bill-selection">
         <div class="bill-container">
-          <p class="heading-tip-calculator">Bill</p>
-          <input type="number" name="amount" id="amount" class="amount" placeholder="0">
+          <label for="amount" class="heading-tip-calculator">Bill</label>
+          <input type="number" name="amount" id="amount" class="amount" placeholder="0" required>
         </div>
       
   
         <!-- tip amount choices -->
         <div class="bill-container">
-          <p class="heading-tip-calculator">Select Tip %</p>
+          <label class="heading-tip-calculator">Select Tip %</label>
           <div class="tip-choices">
             <button class="tip-btn">5%</button>
             <button class="tip-btn">10%</button>
@@ -37,8 +37,8 @@
         
         <!-- number of people -->
         <div class="bill-container">
-          <p class="heading-tip-calculator">Number of People</p>
-          <input type="number" name="number-of-people" id="number-of-people" class="number-of-people" placeholder="0">
+          <label for="number-of-people" class="heading-tip-calculator">Number of People</label>
+          <input type="number" name="number-of-people" id="number-of-people-zero" class="number-of-people-zero" placeholder="0" required>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
