@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Space Mono', monospace;
 }
 
 :root {
@@ -14,15 +11,6 @@
   --light-grayish-cyan: hsl(185, 41%, 84%);
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
-}
-
-body {
-  background-color: var(--light-grayish-cyan);
-}
-
-.tip-calculator-container {
-  background-color: var(--white);
-
 }
 
 /* footer  */
