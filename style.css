@@ -34,7 +34,7 @@ body {
 /* bill tip amount */
 .tip-calculator-container {
   background-color: var(--white);
-  border-radius: 30px 30px 0 0;
+  border-radius: 1.875em 1.875em 0 0;
   height: 100%;
   padding: 2em;
 }
@@ -57,7 +57,7 @@ body {
 /* tip amount choices */
 .tip-choices {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
 }
 
@@ -83,8 +83,13 @@ body {
   background-position: 0.75em;
 }
 
+/* inputs */
 .number-of-people::-webkit-outer-spin-button,
-.number-of-people::-webkit-inner-spin-button {
+.number-of-people::-webkit-inner-spin-button, 
+.amount::-webkit-outer-spin-button,
+.amount::-webkit-inner-spin-button, 
+.custom-percent-tip::-webkit-outer-spin-button,
+.custom-percent-tip::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -98,6 +103,56 @@ body {
   border: none;
   background-color: var(--input-bg-color);
   border-radius: 0.25em;
+}
+
+::placeholder {
+  color: var(--grayish-cyan);
+}
+
+.amount:active, .custom-percent-tip:active, .number-of-people:active {
+  outline: 2px solid var(--very-dark-cyan);
+}
+
+/* total tip amount */
+.total-amount-and-div-container {
+  background-color: var(--very-dark-cyan);
+  padding: 2em;
+  border-radius: 0.75em;
+}
+
+.tip-amount-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.tip-amount-container p {
+  color: var(--white);
+}
+
+.tip-amount-container span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--grayish-cyan);
+}
+
+#tip-amount, #amount-per-person {
+  color: var(--strong-cyan);
+  font-size: 2.5rem;
+}
+
+.btn-reset {
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  border: none;
+  color: var(--very-dark-cyan);
+  font-size: 1.25rem;
+  width: 100%;
+  padding: 0.5em 0;
+  border-radius: 0.25em;
+  cursor: pointer;
 }
 
 /* footer  */
