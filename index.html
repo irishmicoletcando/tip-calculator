@@ -17,7 +17,7 @@
     <div class="tip-calculator-container">
       <div class="bill-container">
         <p class="heading-tip-calculator">Bill</p>
-        <input type="text" name="amount" id="amount" class="amount">
+        <input type="number" name="amount" id="amount" class="amount" placeholder="0">
       </div>
     
 
@@ -30,28 +30,25 @@
           <button class="tip-btn">15%</button>
           <button class="tip-btn">20%</button>
           <button class="tip-btn">25%</button>
-          <input type="text" name="custom-percent-tip" id="custom-percent-tip" class="custom-percent-tip" placeholder="Custom">
+          <input type="number" name="custom-percent-tip" id="custom-percent-tip" class="custom-percent-tip" placeholder="Custom">
         </div>
       </div>
       
       <!-- number of people -->
       <div class="bill-container">
         <p class="heading-tip-calculator">Number of People</p>
-        <input type="number" name="number-of-people" id="number-of-people" class="number-of-people">
+        <input type="number" name="number-of-people" id="number-of-people" class="number-of-people" placeholder="0">
       </div>
 
+      <!-- total tip amount -->
       <div class="total-amount-and-div-container">
         <div class="tip-amount-container">
           <p>Tip Amount<span>/ person</span></p>
-          <p id="tip-amount">
-            <!-- Tip amount here -->
-          </p>
+          <p id="tip-amount">$0.00</p>
         </div>
         <div class="tip-amount-container">
           <p>Total<span>/ person</span></p>
-          <p id="amount-per-person">
-            <!-- Divided tip amount here -->
-          </p>
+          <p id="amount-per-person">$0.00</p>
         </div>
         <button id="btn-reset">Reset</button>
       </div>
