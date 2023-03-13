@@ -22,13 +22,13 @@ body {
   background-color: var(--light-grayish-cyan);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
 }
 
-.splitter-logo-container {
-  padding: 3em;
-  display: flex;
-  justify-content: center;
+.splitter-logo {
+  display: block;
+  margin: 1.5em auto;
 }
 
 /* bill tip amount */
@@ -153,7 +153,7 @@ input[type=number]:focus {
   cursor: pointer;
 }
 
-.tip-btn:active, .btn-reset:hover {
+.btn-reset:hover {
   background-color: var(--light-grayish-cyan);
 }
 
@@ -165,4 +165,22 @@ footer {
 
 footer a { 
   color: hsl(228, 45%, 44%); 
+}
+
+/* for smaller and larger screens */
+@media (min-width: 1024px) {
+  .tip-calculator-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin: 0 auto;
+    width: 70%;
+    border-radius: 1.875em;
+  }
+
+  .total-amount-and-div-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
