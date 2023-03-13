@@ -51,18 +51,13 @@ body {
 .amount {
   background: url(./images/icon-dollar.svg);
   background-repeat: no-repeat;
-  background-position: 1em;
-  padding: 0.25em;
-  width: 100%;
-  border: none;
-  background-color: var(--input-bg-color);
-  border-radius: 0.35em;
+  background-position: 0.75em;
 }
 
 /* tip amount choices */
 .tip-choices {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1em;
 }
 
@@ -79,6 +74,30 @@ body {
 .tip-btn:hover {
   background-color: var(--strong-cyan);
   color: var(--very-dark-cyan);
+}
+
+/* number of people */
+.number-of-people {
+  background: url(./images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 0.75em;
+}
+
+.number-of-people::-webkit-outer-spin-button,
+.number-of-people::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount, .custom-percent-tip, .number-of-people {
+  color: var(--very-dark-cyan);
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0.25em 0.75em;
+  width: 100%;
+  border: none;
+  background-color: var(--input-bg-color);
+  border-radius: 0.25em;
 }
 
 /* footer  */
