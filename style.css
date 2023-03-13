@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Space Mono', monospace;
 }
 
 :root {
@@ -12,6 +15,39 @@
   --very-light-grayish-cyan: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
 }
+
+body {
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.splitter-logo-container {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+/* bill tip amount */
+.tip-calculator-container {
+  background-color: var(--white);
+  border-radius: 30px 30px 0 0;
+  height: 100%;
+  padding: 2em;
+}
+
+.heading-tip-calculator {
+  color: var(--grayish-cyan);
+  margin-bottom: 0.25em;
+}
+
+/* bill input */
+.amount {
+  background: url(./images/icon-dollar.svg) no-repeat left;
+  padding: 0.25em;
+}
+
 
 /* footer  */
 footer { 
