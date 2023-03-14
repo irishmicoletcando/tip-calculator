@@ -1,9 +1,17 @@
 'use strict'
 
-const inputAmount = document.getElementById("amount");
+const billTotal = document.getElementById("amount");
 const tipBtns = document.querySelectorAll(".tip-btn");
 const customTip = document.getElementById("custom-percent-tip");
 const numberOfPeople = document.getElementById("number-of-people");
+const errorZeroPerson = document.getElementById("zero-num-people");
 const tipAmount = document.getElementById("tip-amount");
-const totalTip = document.getElementById("amount-per-person");
+const totalAmountPerPerson = document.getElementById("amount-per-person");
 const resetBtn = document.getElementById("btn-reset");
+
+numberOfPeople.oninput = function() {
+  if (Number(numberOfPeople.value) === 0) {
+    errorZeroPerson.style.display = 'flex';
+    numberOfPeople.style.border = "2px solid #B71C1C";
+  }
+}
