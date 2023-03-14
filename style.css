@@ -119,8 +119,14 @@ input[type=number]:focus {
   border: 2px solid #B71C1C;
 }
 
-#number-of-people-zero::before {
-  content: "Can't be zero";
+.label-num-people {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zero-num-people {
+  display: none;
   color: #B71C1C;
 }
 
