@@ -13,5 +13,18 @@ numberOfPeople.oninput = function() {
   if (Number(numberOfPeople.value) === 0) {
     errorZeroPerson.style.display = 'flex';
     numberOfPeople.style.border = "2px solid #B71C1C";
+  } 
+  if (Number(numberOfPeople.value) < 0) {
+    errorZeroPerson.textContent = "Can't be less than zero";
+    numberOfPeople.style.border = "2px solid #B71C1C";
   }
 }
+
+resetBtn.addEventListener("click", function(){
+  billTotal.value = "";
+  numberOfPeople.value = "";
+  errorZeroPerson.textContent = "";
+  numberOfPeople.style.border = "2px solid transparent";
+  tipAmount.textContent = "$0.00";
+  totalAmountPerPerson.textContent = "$0.00";
+})
