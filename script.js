@@ -12,11 +12,14 @@ const resetBtn = document.getElementById("btn-reset");
 numberOfPeople.oninput = function() {
   if (Number(numberOfPeople.value) === 0) {
     errorZeroPerson.style.display = 'flex';
+    errorZeroPerson.textContent = "Can't be zero";
     numberOfPeople.style.border = "2px solid #B71C1C";
-  } 
-  if (Number(numberOfPeople.value) < 0) {
+  } else if (Number(numberOfPeople.value) < 0) {
     errorZeroPerson.textContent = "Can't be less than zero";
     numberOfPeople.style.border = "2px solid #B71C1C";
+  } else {
+    errorZeroPerson.style.display = "none"
+    numberOfPeople.style.border = "2px solid var(--strong-cyan)";
   }
 }
 
