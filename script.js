@@ -12,6 +12,10 @@ const resetBtn = document.getElementById("btn-reset");
 
 let percent = 0;
 
+// Add input event listener to bill and number of people input fields
+billTotal.addEventListener("input", updateTip);
+numberOfPeople.addEventListener("input", updateTip);
+
 tipBtns.forEach(btn => {
   btn.addEventListener("click", function () {
     // Remove "tip-btn-selected" class from all tip buttons
@@ -25,6 +29,7 @@ tipBtns.forEach(btn => {
     // Update the percent variable and call the updateTip function
     percent = Number(btn.textContent.slice(0, -1));
     customTip.value = "";
+    updateTip();
   });
 });
 
@@ -57,3 +62,16 @@ resetBtn.addEventListener("click", function(){
   tipAmount.textContent = "$0.00";
   totalAmountPerPerson.textContent = "$0.00";
 })
+
+// Update the tip and total amount
+function updateTip() {
+  const bill = Number(billTotal.value);
+  const numPeople = Number(numberOfPeople.value);
+
+  let tipTotal = bill * (percent / 100);
+  let tipPerson = tipTotal / numPeople;
+  let totalPerson = (bill + tipTotal) / numPeople;
+
+  tipAmount.textContent = "$" + tipPerson.toFixed(2);
+  totalAmountPerPerson.textContent = "$" + totalPerson.toFixed(2);
+}
