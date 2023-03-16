@@ -33,6 +33,15 @@ tipBtns.forEach(btn => {
   });
 });
 
+customTip.addEventListener("input", function () {
+  // Update the percent variable and call the updateTip function
+  percent = Number(customTip.value);
+  tipBtns.forEach(btn => {
+    btn.classList.remove("tip-btn-selected");
+  });
+  updateTip();
+});
+
 // Validate inputs for number of people
 numberOfPeople.addEventListener("input", function() {
   let numPeople = Number(numberOfPeople.value)
