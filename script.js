@@ -9,6 +9,14 @@ const tipAmount = document.getElementById("tip-amount");
 const totalAmountPerPerson = document.getElementById("amount-per-person");
 const resetBtn = document.getElementById("btn-reset");
 
+tipBtns.forEach(tipBtn => {
+  tipBtn.addEventListener("click", function() {
+    tipBtn.classList.add("tip-btn-selected");
+    // let tipValue = parseFloat(tipBtn.textContent);
+  })
+  tipBtn.classList.remove("tip-btn-selected");
+})
+
 numberOfPeople.oninput = function() {
   if (Number(numberOfPeople.value) === 0) {
     errorZeroPerson.style.display = 'flex';
@@ -25,6 +33,12 @@ numberOfPeople.oninput = function() {
 
 resetBtn.addEventListener("click", function(){
   billTotal.value = "";
+
+  tipBtns.forEach(tipBtn => {
+    tipBtn.classList.remove
+    ("tip-btn-selected");
+  })
+
   numberOfPeople.value = "";
   errorZeroPerson.textContent = "";
   numberOfPeople.style.border = "2px solid transparent";
