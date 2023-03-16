@@ -69,7 +69,7 @@ function updateTip() {
   const numPeople = Number(numberOfPeople.value);
 
   // Check if the inputs are all valid numbers and not equal to 0
-  if (isNaN(bill) || isNaN(numPeople) || bill === 0 || numPeople === 0) {
+  if (isNaN(bill) || isNaN(numPeople) || bill === 0 || numPeople === 0 || numPeople < 0) {
     // Exit the function if bill or numPeople is not a number or is zero
     return;
   }
