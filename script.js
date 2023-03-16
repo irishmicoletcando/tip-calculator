@@ -68,7 +68,10 @@ function updateTip() {
   const bill = Number(billTotal.value);
   const numPeople = Number(numberOfPeople.value);
 
-  let tipTotal = bill * (percent / 100);
+  // Check if customTip contains a valid value, and use it if it does, otherwise use the percent variable
+  let tipPercentage = customTip.value ? Number(customTip.value) : percent;
+
+  let tipTotal = bill * (tipPercentage / 100);
   let tipPerson = tipTotal / numPeople;
   let totalPerson = (bill + tipTotal) / numPeople;
 
