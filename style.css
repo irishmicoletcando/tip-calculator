@@ -193,6 +193,11 @@ footer a {
     border-radius: 1.875em;
   }
 
+  .tip-choices {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
   .total-amount-and-div-container {
     display: flex;
     flex-direction: column;
