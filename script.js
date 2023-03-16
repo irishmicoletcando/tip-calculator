@@ -12,13 +12,21 @@ const resetBtn = document.getElementById("btn-reset");
 
 let percent = 0;
 
-tipBtns.forEach(tipBtn => {
-  tipBtn.addEventListener("click", function() {
-    tipBtn.classList.add("tip-btn-selected");
-    // let tipValue = parseFloat(tipBtn.textContent);
-  })
-  tipBtn.classList.remove("tip-btn-selected");
-})
+tipBtns.forEach(btn => {
+  btn.addEventListener("click", function () {
+    // Remove "tip-btn-selected" class from all tip buttons
+    tipBtns.forEach(btn => {
+      btn.classList.remove("tip-btn-selected");
+    });
+    
+    // Add "tip-btn-selected" class to the clicked tip button
+    btn.classList.add("tip-btn-selected");
+    
+    // Update the percent variable and call the updateTip function
+    percent = Number(btn.textContent.slice(0, -1));
+    customTip.value = "";
+  });
+});
 
 // Validate inputs for number of people
 numberOfPeople.addEventListener("input", function() {
