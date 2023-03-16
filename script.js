@@ -68,6 +68,12 @@ function updateTip() {
   const bill = Number(billTotal.value);
   const numPeople = Number(numberOfPeople.value);
 
+  // Check if the inputs are all valid numbers and not equal to 0
+  if (isNaN(bill) || isNaN(numPeople) || bill === 0 || numPeople === 0) {
+    // Exit the function if bill or numPeople is not a number or is zero
+    return;
+  }
+
   // Check if customTip contains a valid value, and use it if it does, otherwise use the percent variable
   let tipPercentage = customTip.value ? Number(customTip.value) : percent;
 
